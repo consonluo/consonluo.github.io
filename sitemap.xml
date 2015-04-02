@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://consonluo.github.io/2015/04/01/%E5%86%99%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2015-04-01T08:29:23.120Z</lastmod>
+    <loc>http://consonluo.github.io/2015/04/01/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</loc>
+    <lastmod>2015-04-02T08:09:54.087Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://consonluo.github.io/2015/04/02/hello-world/</loc>
+    <lastmod>2015-04-02T08:04:54.303Z</lastmod>
   </url>
   
   <url>
@@ -14,16 +19,6 @@
   <url>
     <loc>http://consonluo.github.io/404.html</loc>
     <lastmod>2015-04-01T07:36:25.847Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://consonluo.github.io/2015/04/01/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</loc>
-    <lastmod>2015-04-01T02:40:48.048Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://consonluo.github.io/2015/04/01/hello-world/</loc>
-    <lastmod>2015-04-01T01:34:01.092Z</lastmod>
   </url>
   
 </urlset>
