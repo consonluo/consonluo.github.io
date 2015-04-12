@@ -118,10 +118,10 @@
     <link href="http://consonluo.github.io/2015/04/09/Android%E5%BC%80%E5%8F%91%E8%AE%B2%E4%B9%89%E7%B3%BB%E5%88%97/"/>
     <id>http://consonluo.github.io/2015/04/09/Android开发讲义系列/</id>
     <published>2015-04-09T14:08:02.000Z</published>
-    <updated>2015-04-12T14:22:05.227Z</updated>
-    <content type="html"><![CDATA[<p>  从2012年开始接触Android开发到现在，其实已经算比较长一段时间了。从接触Java开始入手，慢慢了解Android开发，期间做过一些比较复杂的应用，也自己写过一些解决自己需求的小应用，系统移植和驱动开发这一块也做过尝试。正好最近在给别人讲Android开发的入门，也正好借此机会整理了一些笔记。从比较浅显的内容开始慢慢讲。有时间也就慢慢整理出来放到博客上吧，也算是自己的一些总结和感悟。</p>
-<p>  网上其实已经有很多Android开发入门或者深入讲解的系列资料了，我这里再整理出来一些也不一定写的很好，但是也算是结合开发经历做些总结吧。</p>
-<p>  参考了网上的一些资料，下面列了一些比较经典的入门资料吧，有事没事可以看看：</p>
+    <updated>2015-04-12T14:26:31.950Z</updated>
+    <content type="html"><![CDATA[<p>　　从2012年开始接触Android开发到现在，其实已经算比较长一段时间了。从接触Java开始入手，慢慢了解Android开发，期间做过一些比较复杂的应用，也自己写过一些解决自己需求的小应用，系统移植和驱动开发这一块也做过尝试。正好最近在给别人讲Android开发的入门，也正好借此机会整理了一些笔记。从比较浅显的内容开始慢慢讲。有时间也就慢慢整理出来放到博客上吧，也算是自己的一些总结和感悟。</p>
+<p>　　网上其实已经有很多Android开发入门或者深入讲解的系列资料了，我这里再整理出来一些也不一定写的很好，但是也算是结合开发经历做些总结吧。</p>
+<p>　　参考了网上的一些资料，下面列了一些比较经典的入门资料吧，有事没事可以看看：</p>
 <ul>
 <li><a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">序言 | Android官方培训课程中文版(v0.9.2)</a></li>
 <li><a href="http://www.jikexueyuan.com/event/android.html?hmsr=osc_word_androidevent" target="_blank" rel="external">零基础Android学习路径图</a></li>
@@ -136,7 +136,7 @@
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>  从2012年开始接触Android开发到现在，其实已经算比较长一段时间了。从接触Java开始入手，慢慢了解Android开发，期间做过一些比较复杂的应用，也自己写过一些解决自己需求的小应用，系统移植和驱动开发这一块也做过尝试。正好最近在给别人讲Android开发的入门，]]>
+    <![CDATA[<p>　　从2012年开始接触Android开发到现在，其实已经算比较长一段时间了。从接触Java开始入手，慢慢了解Android开发，期间做过一些比较复杂的应用，也自己写过一些解决自己需求的小应用，系统移植和驱动开发这一块也做过尝试。正好最近在给别人讲Android开发的入门，]]>
     </summary>
     
       <category term="Android" scheme="http://consonluo.github.io/tags/Android/"/>
