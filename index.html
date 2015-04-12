@@ -92,18 +92,18 @@
 </header>
     <div class="article-content">
         
-        <h1 id="Android开发环境配置">Android开发环境配置</h1><pre><code>android开发工具比较常用的就是Eclipse和android studio，两者都用过一段时间，目前还是更习惯用Eclipse吧，因为经常也会写一写Java的程序。这里记录一下基于Eclipse的android开发环境配置。
-</code></pre><h2 id="JDK安装">JDK安装</h2><pre><code>Java环境首先需要安装jdk。如果你还没有JDK的话，可以去这里[<span class="link_label">下载</span>](<span class="link_url">http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html</span>)，android也比较简单，按照提示一步一步走就行了，就是要注意记一下jdk的安装目录。
+        <pre><code>android开发工具比较常用的就是Eclipse和android studio，两者都用过一段时间，目前还是更习惯用Eclipse吧，因为经常也会写一写Java的程序。这里记录一下基于Eclipse的android开发环境配置。
+</code></pre><h1 id="JDK安装">JDK安装</h1><pre><code>Java环境首先需要安装jdk。如果你还没有JDK的话，可以去这里 [<span class="link_label">下载</span>](<span class="link_url">http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html</span>)，android也比较简单，按照提示一步一步走就行了，就是要注意记一下jdk的安装目录。
 安装好之后是需要设置环境变量，步骤如下：
-<span class="code">    1.    我的电脑-&gt;属性-&gt;高级-&gt;环境变量-&gt;系统变量中添加以下环境变量：</span>
-<span class="code">    2.    JAVA_HOME值为： D:\Program Files\Java\jdk1.6.0_18（你安装JDK的目录）</span>
-<span class="code">    3.    CLASSPATH值为：.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\bin;</span>
-<span class="code">    4.    Path:  在开始追加 %JAVA_HOME%\bin;</span>
-<span class="code">    5.    NOTE：前面四步设置环境变量对搭建Android开发环境不是必须的，可以跳过。</span>
+<span class="bullet">1.    </span>我的电脑-&gt;属性-&gt;高级-&gt;环境变量-&gt;系统变量中添加以下环境变量：
+<span class="bullet">2.    </span>JAVA<span class="emphasis">_HOME值为： D:\Program Files\Java\jdk1.6.0_</span>18（你安装JDK的目录）
+<span class="bullet">3.    </span>CLASSPATH值为：.;%JAVA<span class="emphasis">_HOME%\lib\tools.jar;%JAVA_</span>HOME%\lib\dt.jar;%JAVA_HOME%\bin;
+<span class="bullet">4.    </span>Path:  在开始追加 %JAVA_HOME%\bin;
+<span class="bullet">5.    </span>NOTE：前面四步设置环境变量对搭建Android开发环境不是必须的，可以跳过。
 安装完成之后，可以在检查JDK是否安装成功。打开cmd窗口，输入java –version 查看JDK的版本信息。出现类似下面的画面表示安装成功了：
 ![<span class="link_label">图1</span>](<span class="link_url">/images/1.png</span>)
 <span class="code">    图1、验证JDK安装是否成功</span>
-</code></pre><h2 id="Eclipse安装">Eclipse安装</h2><p>如果你还么有Eclipse的话，可以去这里下载，下载如下图所示的Eclipse IDE for Java Developers（92M）的win 32bit版：<br> 图2、Eclipse下载<br>解压之后即可使用。<br>1.3、Android SDK安装<br>在Android Developers下载android-sdk_r05-windows.zip，下载完成后解压到任意路径。<br>•    运行SDK Setup.exe，点击Available Packages。如果没有出现可安装的包，请点击Settings，选中Misc中的”Force <a href="https://...&quot;这项，再点击Available" target="_blank" rel="external">https://...&quot;这项，再点击Available</a> Packages 。<br>•    选择希望安装的SDK及其文档或者其它包，点击Installation Selected、Accept All、Install Accepted，开始下载安装所选包<br>•    在用户变量中新建PATH值为：Android SDK中的tools绝对路径（本机为D:\AndroidDevelop\android-sdk-windows\tools）。<br> 图2、设置Android SDK的环境变量<br>“确定”后，重新启动计算机。重启计算机以后，进入cmd命令窗口，检查SDK是不是安装成功。<br>运行 android –h 如果有类似以下的输出，表明安装成功：<br> 图3、验证Android SDK是否安装成功<br>1.4、ADT安装<br>•    打开 Eclipse IDE，进入菜单中的 “Help” -&gt; “Install New Software”<br>•    点击Add…按钮，弹出对话框要求输入Name和Location：Name自己随便取，Location输入<a href="http://dl-ssl.google.com/android/eclipse。如下图所示：" target="_blank" rel="external">http://dl-ssl.google.com/android/eclipse。如下图所示：</a></p>
+</code></pre><h1 id="Eclipse安装">Eclipse安装</h1><p>如果你还么有Eclipse的话，可以去这里下载，下载如下图所示的Eclipse IDE for Java Developers（92M）的win 32bit版：<br> 图2、Eclipse下载<br>解压之后即可使用。<br>1.3、Android SDK安装<br>在Android Developers下载android-sdk_r05-windows.zip，下载完成后解压到任意路径。<br>•    运行SDK Setup.exe，点击Available Packages。如果没有出现可安装的包，请点击Settings，选中Misc中的”Force <a href="https://...&quot;这项，再点击Available" target="_blank" rel="external">https://...&quot;这项，再点击Available</a> Packages 。<br>•    选择希望安装的SDK及其文档或者其它包，点击Installation Selected、Accept All、Install Accepted，开始下载安装所选包<br>•    在用户变量中新建PATH值为：Android SDK中的tools绝对路径（本机为D:\AndroidDevelop\android-sdk-windows\tools）。<br> 图2、设置Android SDK的环境变量<br>“确定”后，重新启动计算机。重启计算机以后，进入cmd命令窗口，检查SDK是不是安装成功。<br>运行 android –h 如果有类似以下的输出，表明安装成功：<br> 图3、验证Android SDK是否安装成功<br>1.4、ADT安装<br>•    打开 Eclipse IDE，进入菜单中的 “Help” -&gt; “Install New Software”<br>•    点击Add…按钮，弹出对话框要求输入Name和Location：Name自己随便取，Location输入<a href="http://dl-ssl.google.com/android/eclipse。如下图所示：" target="_blank" rel="external">http://dl-ssl.google.com/android/eclipse。如下图所示：</a></p>
 <p>•    确定返回后，在work with后的下拉列表中选择我们刚才添加的ADT，我们会看到下面出有Developer Tools，展开它会有Android DDMS和Android Development Tool，勾选他们。 如下图所示：</p>
 <p>•    然后就是按提示一步一步next。<br>完成之后：<br>•    选择Window &gt; Preferences…<br>•    在左边的面板选择Android，然后在右侧点击Browse…并选中SDK路径，本机为：<br>D:\AndroidDevelop\android-sdk-windows<br>•    点击Apply、OK。配置完成。<br>1.5、创建AVD<br>为使Android应用程序可以在模拟器上运行，必须创建AVD。<br>•    1、在Eclipse中。选择Windows &gt; Android SDK and AVD Manager<br>•    2、点击左侧面板的Virtual Devices，再右侧点击New<br>•    3、填入Name，选择Target的API，SD Card大小任意，Skin随便选，Hardware目前保持默认值<br>•    4、点击Create AVD即可完成创建AVD<br>注意：如果你点击左侧面板的Virtual Devices，再右侧点击New ，而target下拉列表没有可选项时，这时候你：<br>•    点击左侧面板的Available Packages，在右侧勾选<a href="https://dl-ssl.google.com/android/repository/repository.xml，如下图所示：" target="_blank" rel="external">https://dl-ssl.google.com/android/repository/repository.xml，如下图所示：</a></p>
 <p>•    然后点击Install Selected按钮，接下来就是按提示做就行了<br>要做这两步，原因是在1.3、Android SDK安装中没有安装一些必要的可用包（Available Packages）。</p>
