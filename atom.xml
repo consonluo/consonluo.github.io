@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Writing     Thinking     Doing]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://consonluo.github.io/"/>
-  <updated>2015-04-12T12:10:34.108Z</updated>
+  <updated>2015-04-12T14:07:19.147Z</updated>
   <id>http://consonluo.github.io/</id>
   
   <author>
@@ -15,11 +15,55 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[HelloWord与工程目录介绍]]></title>
+    <link href="http://consonluo.github.io/2015/04/12/HelloWord%E4%B8%8E%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://consonluo.github.io/2015/04/12/HelloWord与工程目录介绍/</id>
+    <published>2015-04-12T13:13:47.000Z</published>
+    <updated>2015-04-12T14:07:19.147Z</updated>
+    <content type="html"><![CDATA[<h1 id="第一个Android应用：hello_world">第一个Android应用：hello world</h1><p>•    通过File -&gt; New -&gt; Project 菜单，建立新项目”Android Project”<br>•    然后填写必要的参数，如下图所示：（注意这里我勾选的是Google APIs，你可以选你喜欢的，但你要创建相应的AVD）</p>
+<p>相关参数的说明：</p>
+<ol>
+<li>Project Name: 包含这个项目的文件夹的名称。</li>
+<li>Package Name: 包名，遵循JAVA规范，用包名来区分不同的类是很重要的，我用的是helloworld.test。</li>
+<li>Activity Name: 这是项目的主类名，这个类将会是Android的Activity类的子类。一个Activity类是一个简单的启动程序和控制程序的类。它可以根据需要创建界面，但不是必须的。</li>
+<li>Application Name: 一个易读的标题在你的应用程序上。</li>
+<li>在”选择栏”的 “Use default location” 选项，允许你选择一个已存在的项目。<br>•    点击Finish后，点击Eclipse的Run菜单选择Run Configurations…<br>•    选择“Android Application”，点击在左上角（按钮像一张纸上有个“+”号）或者双击“Android Application”， 有个新的选项“New_configuration”（可以改为我们喜欢的名字）。<br>•    在右侧Android面板中点击Browse…，选择HelloWorld<br>•    在Target面板的Automatic中勾选相应的AVD，如果没有可用的AVD的话，你需要点击右下角的Manager…，然后新建相应的AVD。如下图所示：</li>
+</ol>
+<p>•    然后点Run按钮即可，运行成功的话会有Android的模拟器界面，如下图所示：</p>
+<p>三、    Android工程介绍与Eclipse使用<br>1、HelloWorld项目的目录结构<br>（这个HelloWorld项目是基于Android 2.1的）在Eclipse的左侧展开HelloWorld项目，可以看到如下图的目录结构：<br> 图1、HelloWorld项目目录结构<br>下面将分节介绍上面的各级目录结构。<br>1.1、src文件夹<br>顾名思义（src, source code）该文件夹是放项目的源代码的。打开HelloWorld.java文件会看到如下代码：<br> HelloWorld.java</p>
+<p>可以知道：我们新建一个简单的HelloWorld项目，系统为我们生成了一个HelloWorld.java文件。他导入了两个类android.app.Activity和android.os.Bundle，HelloWorld类继承自Activity且重写了onCreate方法。<br>以下说明针对没有学过Java或者Java基础薄弱的人<br>@Override<br>在重写父类的onCreate时，在方法前面加上@Override 系统可以帮你检查方法的正确性。例如，public void onCreate(Bundle savedInstanceState){…….}这种写法是正确的，如果你写成public void oncreate(Bundle savedInstanceState){…….}这样编译器回报如下错误——The method oncreate(Bundle) of type HelloWorld must override or implement a supertype method，以确保你正确重写onCreate方法。（因为oncreate应该为onCreate）<br>而如果你不加@Override，则编译器将不会检测出错误，而是会认为你新定义了一个方法oncreate。<br>android.app.Activity类：因为几乎所有的活动（activities）都是与用户交互的，所以Activity类关注创建窗口，你可以用方法setContentView(View)将自己的UI放到里面。然而活动通常以全屏的方式展示给用户，也可以以浮动窗口或嵌入在另外一个活动中。有两个方法是几乎所有的Activity子类都实现的：</p>
+<ol>
+<li>onCreate(Bundle)：初始化你的活动（Activity），比如完成一些图形的绘制。最重要的是，在这个方法里你通常将用布局资源（layout resource）调用setContentView(int)方法定义你的UI，和用findViewById(int)在你的UI中检索你需要编程地交互的小部件（widgets）。setContentView指定由哪个文件指定布局（main.xml），可以将这个界面显示出来，然后我们进行相关操作，我们的操作会被包装成为一个意图，然后这个意图对应有相关的activity进行处理。</li>
+<li>onPause()：处理当离开你的活动时要做的事情。最重要的是，用户做的所有改变应该在这里提交（通常ContentProvider保存数据）。<br>更多的关于Activity类的详细信息此系列以后的文章将做介绍，如果你想了解更多请参阅相关文档。<br>android.os.Bundle类：从字符串值映射各种可打包的（Parcelable）类型（Bundle单词就是捆绑的意思，所有这个类很好理解和记忆）。如该类提供了公有方法——public boolean containKey(String key)，如果给定的key包含在Bundle的映射中返回true，否则返回false。该类实现了Parceable和Cloneable接口，所以它具有这两者的特性。<br>1.2、gen文件夹<br>该文件夹下面有个R.java文件，R.java是在建立项目时自动生成的，这个文件是只读模式的，不能更改。R.java文件中定义了一个类——R，R类中包含很多静态类，且静态类的名字都与res中的一个名字对应，即R类定义该项目所有资源的索引。看我们的HelloWorld项目是不是如此，如下图：<br>图2、R.java对应res<br>通过R.java我们可以很快地查找我们需要的资源，另外编绎器也会检查R.java列表中的资源是否被使用到，没有被使用到的资源不会编绎进软件中，这样可以减少应用在手机占用的空间。<br>1.3、Android 2.1文件夹<br>该文件夹下包含android.jar文件，这是一个Java 归档文件，其中包含构建应用程序所需的所有的Android SDK 库（如Views、Controls）和APIs。通过android.jar将自己的应用程序绑定到Android SDK和Android Emulator，这允许你使用所有Android的库和包，且使你的应用程序在适当的环境中调试。例如上面的HelloWorld.java源文件中的：<br>import android.app.Activity;<br>import android.os.Bundle;<br>这里两行代码就是从android.jar导入包。<br>1.4、assets<br>包含应用系统需要使用到的诸如mp3、视频类的文件。<br>1.5、res文件夹<br>资源目录，包含你项目中的资源文件并将编译进应用程序。向此目录添加资源时，会被R.java自动记录。新建一个项目，res目录下会有三个子目录：drawabel、layout、values。<br>•    drawabel-?dpi：包含一些你的应用程序可以用的图标文件(<em>.png、</em>.jpg)<br>•    layout：界面布局文件(main.xml)与WEB应用中的HTML类同，没修改过的main.xml文件如下（HelloWorld的就没有修改过）：<br>&lt;?xml version=”1.0” encoding=”utf-8”?&gt;<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"><br><textview android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello"><br></textview></linearlayout>
+
+
+</li>
+</ol>
+<p>•    values：软件上所需要显示的各种文字。可以存放多个*.xml文件，还可以存放不同类型的数据。比如arrays.xml、colors.xml、dimens.xml、styles.xml<br>1.6、AndroidManifest.xml<br>项目的总配置文件，记录应用中所使用的各种组件。这个文件列出了应用程序所提供的功能，在这个文件中，你可以指定应用程序使用到的服务(如电话服务、互联网服务、短信服务、GPS服务等等)。另外当你新添加一个Activity的时候，也需要在这个文件中进行相应配置，只有配置好后，才能调用此Activity。AndroidManifest.xml将包含如下设置：application permissions、Activities、intent filters等。<br>如果你跟我一样是ASP.NET出生或者学过，你会发现AndroidManifest.xml跟web.config文件很像，可以把它类同于web.config文件理解。<br>如果你不是，你可以这样理解——众所周知xml是一种数据交换格式，AndroidManifest.xml就是用来存储一些数据的，只不过这些数据时关于android项目的配置数据。<br>HelloWorld项目的AndroidManifest.xml如下所示：<br> &lt;?xml version=”1.0” encoding=”utf-8”?&gt;</p>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="helloworld.test" android:versioncode="1" android:versionname="1.0"><br>    <application android:icon="@drawable/icon" android:label="@string/app_name"><br>        <activity android:name=".HelloWorld" android:label="@string/app_name"><br>            <intent-filter><br>                <action android:name="android.intent.action.MAIN"><br>                <category android:name="android.intent.category.LAUNCHER"><br>            </category></action></intent-filter><br>        </activity><br>    </application><br></manifest> 
+
+<p>关于AndroidManifest.xml现在就讲这么多，此系列后面的文章将单独详细介绍。<br>1.7、default.properties<br>记录项目中所需要的环境信息，比如Android的版本等。 HelloWorld的default.properties文件代码如下所示，代码中的注释已经把default.properties解释得很清楚了：</p>
+<h1 id="This_file_is_automatically_generated_by_Android_Tools-">This file is automatically generated by Android Tools.</h1><h1 id="Do_not_modify_this_file_—_YOUR_CHANGES_WILL_BE_ERASED!">Do not modify this file — YOUR CHANGES WILL BE ERASED!</h1><h1 id=""> </h1><h1 id="This_file_must_be_checked_in_Version_Control_Systems-">This file must be checked in Version Control Systems.</h1><h1 id="-1"> </h1><h1 id="To_customize_properties_used_by_the_Ant_build_system_use,">To customize properties used by the Ant build system use,</h1><h1 id="“build-properties”,_and_override_values_to_adapt_the_script_to_your">“build.properties”, and override values to adapt the script to your</h1><h1 id="project_structure-">project structure.</h1><h1 id="Indicates_whether_an_apk_should_be_generated_for_each_density-">Indicates whether an apk should be generated for each density.</h1><p>split.density=false</p>
+<h1 id="Project_target-">Project target.</h1><p>target=android-7</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="第一个Android应用：hello_world">第一个Android应用：hello world</h1><p>•    通过File -&gt; New -&gt; Project 菜单，建立新项目”Android Project”<br>•    然后填写]]>
+    </summary>
+    
+      <category term="Android" scheme="http://consonluo.github.io/tags/Android/"/>
+    
+      <category term="技术" scheme="http://consonluo.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Android开发讲义" scheme="http://consonluo.github.io/categories/Android%E5%BC%80%E5%8F%91%E8%AE%B2%E4%B9%89/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Android开发环境配置]]></title>
     <link href="http://consonluo.github.io/2015/04/10/Android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     <id>http://consonluo.github.io/2015/04/10/Android开发环境配置/</id>
     <published>2015-04-10T14:10:19.000Z</published>
-    <updated>2015-04-12T12:10:34.108Z</updated>
+    <updated>2015-04-12T14:07:19.153Z</updated>
     <content type="html"><![CDATA[<p>android开发工具比较常用的就是Eclipse和android studio，两者都用过一段时间，目前还是更习惯用Eclipse吧，因为经常也会写一写Java的程序。这里记录一下基于Eclipse的android开发环境配置。</p>
 <h1 id="JDK安装">JDK安装</h1><p>Java环境首先需要安装jdk。如果你还没有JDK的话，可以去这里<a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank" rel="external">下载</a>，android也比较简单，按照提示一步一步走就行了，就是要注意记一下jdk的安装目录。<br>安装好之后是需要设置环境变量，步骤如下：</p>
 <ol>
@@ -59,6 +103,40 @@
     <summary type="html">
     <![CDATA[<p>android开发工具比较常用的就是Eclipse和android studio，两者都用过一段时间，目前还是更习惯用Eclipse吧，因为经常也会写一写Java的程序。这里记录一下基于Eclipse的android开发环境配置。</p>
 <h1 id="JDK安装">JD]]>
+    </summary>
+    
+      <category term="Android" scheme="http://consonluo.github.io/tags/Android/"/>
+    
+      <category term="技术" scheme="http://consonluo.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Android开发讲义" scheme="http://consonluo.github.io/categories/Android%E5%BC%80%E5%8F%91%E8%AE%B2%E4%B9%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android开发讲义系列]]></title>
+    <link href="http://consonluo.github.io/2015/04/09/Android%E5%BC%80%E5%8F%91%E8%AE%B2%E4%B9%89%E7%B3%BB%E5%88%97/"/>
+    <id>http://consonluo.github.io/2015/04/09/Android开发讲义系列/</id>
+    <published>2015-04-09T14:08:02.000Z</published>
+    <updated>2015-04-12T14:22:05.227Z</updated>
+    <content type="html"><![CDATA[<p>  从2012年开始接触Android开发到现在，其实已经算比较长一段时间了。从接触Java开始入手，慢慢了解Android开发，期间做过一些比较复杂的应用，也自己写过一些解决自己需求的小应用，系统移植和驱动开发这一块也做过尝试。正好最近在给别人讲Android开发的入门，也正好借此机会整理了一些笔记。从比较浅显的内容开始慢慢讲。有时间也就慢慢整理出来放到博客上吧，也算是自己的一些总结和感悟。</p>
+<p>  网上其实已经有很多Android开发入门或者深入讲解的系列资料了，我这里再整理出来一些也不一定写的很好，但是也算是结合开发经历做些总结吧。</p>
+<p>  参考了网上的一些资料，下面列了一些比较经典的入门资料吧，有事没事可以看看：</p>
+<ul>
+<li><a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">序言 | Android官方培训课程中文版(v0.9.2)</a></li>
+<li><a href="http://www.jikexueyuan.com/event/android.html?hmsr=osc_word_androidevent" target="_blank" rel="external">零基础Android学习路径图</a></li>
+<li><a href="http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank" rel="external">Android学习之路</a></li>
+<li><a href="http://developer.android.com/index.html" target="_blank" rel="external">Android Developers</a></li>
+<li><a href="http://blog.csdn.net/luoshengyang" target="_blank" rel="external">老罗的Android之旅 - 博客频道 - CSDN.NET</a></li>
+<li><a href="http://www.eoeandroid.com/portal.php" target="_blank" rel="external">eoe Android开发者社区<em>Android开发论坛_Android开发</em>安卓开发论坛_安卓论坛</a></li>
+<li><a href="http://www.jikexueyuan.com/path/android/" target="_blank" rel="external">Android安卓开发环境搭建应用游戏项目实战知识体系_极客学院</a></li>
+<li><a href="http://www.jianshu.com/p/2ee0e74abbdf" target="_blank" rel="external">我是如何自学Android，资料分享 - 简书</a></li>
+<li><a href="http://www.marschen.com/forum.php?mod=viewthread&amp;tid=23292" target="_blank" rel="external">Android教程第一季到第五季总目录 - Mars Android</a></li>
+<li><a href="http://www.cnblogs.com/skynet/category/241385.html" target="_blank" rel="external">Android开发之旅 - 随笔分类 - 吴秦 - 博客园</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>  从2012年开始接触Android开发到现在，其实已经算比较长一段时间了。从接触Java开始入手，慢慢了解Android开发，期间做过一些比较复杂的应用，也自己写过一些解决自己需求的小应用，系统移植和驱动开发这一块也做过尝试。正好最近在给别人讲Android开发的入门，]]>
     </summary>
     
       <category term="Android" scheme="http://consonluo.github.io/tags/Android/"/>
