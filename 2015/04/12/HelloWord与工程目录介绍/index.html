@@ -11,27 +11,33 @@
     
 
     
-    <meta name="description" content="第一个Android应用：hello world•    通过File -&amp;gt; New -&amp;gt; Project 菜单，建立新项目”Android Project”•    然后填写必要的参数，如下图所示：（注意这里我勾选的是Google APIs，你可以选你喜欢的，但你要创建相应的AVD）
+    <meta name="description" content="第一个Android应用：hello world　　创建工程步骤：
+•    通过File -&amp;gt; New -&amp;gt; Project 菜单，建立新项目”Android Project”
+•    然后填写必要的参数
 相关参数的说明：
 
 Project Name: 包含这个项目的文件夹的名称。
-Package Nam">
+Package Name: 包名，遵循JAVA规范，用包名来区分不同的类是很重要的，我用的是hell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HelloWord与工程目录介绍">
 <meta property="og:url" content="http://consonluo.github.io/2015/04/12/HelloWord与工程目录介绍/index.html">
 <meta property="og:site_name" content="Live My Life~ Conson's Blog">
-<meta property="og:description" content="第一个Android应用：hello world•    通过File -&amp;gt; New -&amp;gt; Project 菜单，建立新项目”Android Project”•    然后填写必要的参数，如下图所示：（注意这里我勾选的是Google APIs，你可以选你喜欢的，但你要创建相应的AVD）
+<meta property="og:description" content="第一个Android应用：hello world　　创建工程步骤：
+•    通过File -&amp;gt; New -&amp;gt; Project 菜单，建立新项目”Android Project”
+•    然后填写必要的参数
 相关参数的说明：
 
 Project Name: 包含这个项目的文件夹的名称。
-Package Nam">
+Package Name: 包名，遵循JAVA规范，用包名来区分不同的类是很重要的，我用的是hell">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HelloWord与工程目录介绍">
-<meta name="twitter:description" content="第一个Android应用：hello world•    通过File -&amp;gt; New -&amp;gt; Project 菜单，建立新项目”Android Project”•    然后填写必要的参数，如下图所示：（注意这里我勾选的是Google APIs，你可以选你喜欢的，但你要创建相应的AVD）
+<meta name="twitter:description" content="第一个Android应用：hello world　　创建工程步骤：
+•    通过File -&amp;gt; New -&amp;gt; Project 菜单，建立新项目”Android Project”
+•    然后填写必要的参数
 相关参数的说明：
 
 Project Name: 包含这个项目的文件夹的名称。
-Package Nam">
+Package Name: 包名，遵循JAVA规范，用包名来区分不同的类是很重要的，我用的是hell">
 
     
     <link rel="alternative" href="/atom.xml" title="Live My Life~ Conson&#39;s Blog" type="application/atom+xml">
@@ -109,18 +115,25 @@ Package Nam">
 		
 		</div>
 		
-		<h1 id="第一个Android应用：hello_world">第一个Android应用：hello world</h1><p>•    通过File -&gt; New -&gt; Project 菜单，建立新项目”Android Project”<br>•    然后填写必要的参数，如下图所示：（注意这里我勾选的是Google APIs，你可以选你喜欢的，但你要创建相应的AVD）</p>
+		<h1 id="第一个Android应用：hello_world">第一个Android应用：hello world</h1><p>　　创建工程步骤：</p>
+<p>•    通过File -&gt; New -&gt; Project 菜单，建立新项目”Android Project”</p>
+<p>•    然后填写必要的参数</p>
 <p>相关参数的说明：</p>
 <ol>
 <li>Project Name: 包含这个项目的文件夹的名称。</li>
 <li>Package Name: 包名，遵循JAVA规范，用包名来区分不同的类是很重要的，我用的是helloworld.test。</li>
 <li>Activity Name: 这是项目的主类名，这个类将会是Android的Activity类的子类。一个Activity类是一个简单的启动程序和控制程序的类。它可以根据需要创建界面，但不是必须的。</li>
 <li>Application Name: 一个易读的标题在你的应用程序上。</li>
-<li>在”选择栏”的 “Use default location” 选项，允许你选择一个已存在的项目。<br>•    点击Finish后，点击Eclipse的Run菜单选择Run Configurations…<br>•    选择“Android Application”，点击在左上角（按钮像一张纸上有个“+”号）或者双击“Android Application”， 有个新的选项“New_configuration”（可以改为我们喜欢的名字）。<br>•    在右侧Android面板中点击Browse…，选择HelloWorld<br>•    在Target面板的Automatic中勾选相应的AVD，如果没有可用的AVD的话，你需要点击右下角的Manager…，然后新建相应的AVD。如下图所示：</li>
 </ol>
-<p>•    然后点Run按钮即可，运行成功的话会有Android的模拟器界面，如下图所示：</p>
-<h1 id="hello_world工程介绍与Eclipse使用">hello world工程介绍与Eclipse使用</h1><p>1、HelloWorld项目的目录结构<br>（这个HelloWorld项目是基于Android 2.1的）在Eclipse的左侧展开HelloWorld项目，可以看到如下图的目录结构：<br> 图1、HelloWorld项目目录结构<br>下面将分节介绍上面的各级目录结构。<br>1.1、src文件夹<br>顾名思义（src, source code）该文件夹是放项目的源代码的。打开HelloWorld.java文件会看到如下代码：<br> HelloWorld.java</p>
-<p>可以知道：我们新建一个简单的HelloWorld项目，系统为我们生成了一个HelloWorld.java文件。他导入了两个类android.app.Activity和android.os.Bundle，HelloWorld类继承自Activity且重写了onCreate方法。<br>以下说明针对没有学过Java或者Java基础薄弱的人<br>@Override<br>在重写父类的onCreate时，在方法前面加上@Override 系统可以帮你检查方法的正确性。例如，public void onCreate(Bundle savedInstanceState){…….}这种写法是正确的，如果你写成public void oncreate(Bundle savedInstanceState){…….}这样编译器回报如下错误——The method oncreate(Bundle) of type HelloWorld must override or implement a supertype method，以确保你正确重写onCreate方法。（因为oncreate应该为onCreate）<br>而如果你不加@Override，则编译器将不会检测出错误，而是会认为你新定义了一个方法oncreate。<br>android.app.Activity类：因为几乎所有的活动（activities）都是与用户交互的，所以Activity类关注创建窗口，你可以用方法setContentView(View)将自己的UI放到里面。然而活动通常以全屏的方式展示给用户，也可以以浮动窗口或嵌入在另外一个活动中。有两个方法是几乎所有的Activity子类都实现的：</p>
+<p>•    在”选择栏”的 “Use default location” 选项，允许你选择一个已存在的项目。点击Finish后，点击Eclipse的Run菜单选择Run　C　　onfigurations…</p>
+<p>•    选择“Android Application”，点击在左上角（按钮像一张纸上有个“+”号）或者双击“Android Application”， 有个新的选项“New_configuration”（可以改为我们喜欢的名字）。</p>
+<p>•    在右侧Android面板中点击Browse…，选择HelloWorld</p>
+<p>•    在Target面板的Automatic中勾选相应的AVD，如果没有可用的AVD的话，你需要点击右下角的Manager…，然后新建相应的AVD。</p>
+<p>•    然后点Run按钮即可，运行成功的话会有Android的模拟器界面</p>
+<h1 id="hello_world工程介绍与Eclipse使用">hello world工程介绍与Eclipse使用</h1><p>1、HelloWorld项目的目录结构</p>
+<p>1.1、src文件夹</p>
+<p>　　顾名思义（src, source code）该文件夹是放项目的源代码的。打开HelloWorld.java文件会看到如下代码： HelloWorld.java</p>
+<p>　　可以知道：我们新建一个简单的HelloWorld项目，系统为我们生成了一个HelloWorld.java文件。他导入了两个类android.app.Activity和android.os.Bundle，HelloWorld类继承自Activity且重写了onCreate方法。<br>　　以下说明针对没有学过Java或者Java基础薄弱的人<br>@Override<br>在重写父类的onCreate时，在方法前面加上@Override 系统可以帮你检查方法的正确性。例如，public void onCreate(Bundle savedInstanceState){…….}这种写法是正确的，如果你写成public void oncreate(Bundle savedInstanceState){…….}这样编译器回报如下错误——The method oncreate(Bundle) of type HelloWorld must override or implement a supertype method，以确保你正确重写onCreate方法。（因为oncreate应该为onCreate）<br>而如果你不加@Override，则编译器将不会检测出错误，而是会认为你新定义了一个方法oncreate。<br>android.app.Activity类：因为几乎所有的活动（activities）都是与用户交互的，所以Activity类关注创建窗口，你可以用方法setContentView(View)将自己的UI放到里面。然而活动通常以全屏的方式展示给用户，也可以以浮动窗口或嵌入在另外一个活动中。有两个方法是几乎所有的Activity子类都实现的：</p>
 <ol>
 <li>onCreate(Bundle)：初始化你的活动（Activity），比如完成一些图形的绘制。最重要的是，在这个方法里你通常将用布局资源（layout resource）调用setContentView(int)方法定义你的UI，和用findViewById(int)在你的UI中检索你需要编程地交互的小部件（widgets）。setContentView指定由哪个文件指定布局（main.xml），可以将这个界面显示出来，然后我们进行相关操作，我们的操作会被包装成为一个意图，然后这个意图对应有相关的activity进行处理。</li>
 <li>onPause()：处理当离开你的活动时要做的事情。最重要的是，用户做的所有改变应该在这里提交（通常ContentProvider保存数据）。<br>更多的关于Activity类的详细信息此系列以后的文章将做介绍，如果你想了解更多请参阅相关文档。<br>android.os.Bundle类：从字符串值映射各种可打包的（Parcelable）类型（Bundle单词就是捆绑的意思，所有这个类很好理解和记忆）。如该类提供了公有方法——public boolean containKey(String key)，如果给定的key包含在Bundle的映射中返回true，否则返回false。该类实现了Parceable和Cloneable接口，所以它具有这两者的特性。<br>1.2、gen文件夹<br>该文件夹下面有个R.java文件，R.java是在建立项目时自动生成的，这个文件是只读模式的，不能更改。R.java文件中定义了一个类——R，R类中包含很多静态类，且静态类的名字都与res中的一个名字对应，即R类定义该项目所有资源的索引。看我们的HelloWorld项目是不是如此，如下图：<br>图2、R.java对应res<br>通过R.java我们可以很快地查找我们需要的资源，另外编绎器也会检查R.java列表中的资源是否被使用到，没有被使用到的资源不会编绎进软件中，这样可以减少应用在手机占用的空间。<br>1.3、Android 2.1文件夹<br>该文件夹下包含android.jar文件，这是一个Java 归档文件，其中包含构建应用程序所需的所有的Android SDK 库（如Views、Controls）和APIs。通过android.jar将自己的应用程序绑定到Android SDK和Android Emulator，这允许你使用所有Android的库和包，且使你的应用程序在适当的环境中调试。例如上面的HelloWorld.java源文件中的：<br>import android.app.Activity;<br>import android.os.Bundle;<br>这里两行代码就是从android.jar导入包。<br>1.4、assets<br>包含应用系统需要使用到的诸如mp3、视频类的文件。<br>1.5、res文件夹<br>资源目录，包含你项目中的资源文件并将编译进应用程序。向此目录添加资源时，会被R.java自动记录。新建一个项目，res目录下会有三个子目录：drawabel、layout、values。<br>•    drawabel-?dpi：包含一些你的应用程序可以用的图标文件(<em>.png、</em>.jpg)<br>•    layout：界面布局文件(main.xml)与WEB应用中的HTML类同，没修改过的main.xml文件如下（HelloWorld的就没有修改过）：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> &lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span>?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    android:orientation=<span class="string">"vertical"</span></span><br><span class="line">    android:layout_width=<span class="string">"fill_parent"</span></span><br><span class="line">    android:layout_height=<span class="string">"fill_parent"</span></span><br><span class="line">    &gt;</span><br><span class="line">&lt;TextView  </span><br><span class="line">    android:layout_width=<span class="string">"fill_parent"</span> </span><br><span class="line">    android:layout_height=<span class="string">"wrap_content"</span> </span><br><span class="line">    android:text=<span class="string">"@string/hello"</span></span><br><span class="line">    /&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure>
