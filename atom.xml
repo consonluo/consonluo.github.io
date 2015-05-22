@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Writing     Thinking     Doing]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://consonluo.github.io/"/>
-  <updated>2015-05-07T11:41:38.460Z</updated>
+  <updated>2015-05-22T13:19:19.576Z</updated>
   <id>http://consonluo.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://consonluo.github.io/2015/04/12/HelloWord%E4%B8%8E%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D/"/>
     <id>http://consonluo.github.io/2015/04/12/HelloWord与工程目录介绍/</id>
     <published>2015-04-12T13:13:47.000Z</published>
-    <updated>2015-05-07T11:41:38.460Z</updated>
+    <updated>2015-05-22T13:19:19.576Z</updated>
     <content type="html"><![CDATA[<h1 id="第一个Android应用：hello_world">第一个Android应用：hello world</h1><p>　　创建工程步骤：</p>
 <p>•    通过File -&gt; New -&gt; Project 菜单，建立新项目”Android Project”</p>
 <p>•    然后填写必要的参数</p>
@@ -39,7 +39,7 @@
 <p>1.1、src文件夹</p>
 <p>　　顾名思义（src, source code）该文件夹是放项目的源代码的。打开HelloWorld.java文件会看到如下代码： HelloWorld.java</p>
 <p>　　可以知道：我们新建一个简单的HelloWorld项目，系统为我们生成了一个HelloWorld.java文件。他导入了两个类android.app.Activity和android.os.Bundle，HelloWorld类继承自Activity且重写了onCreate方法。<br>　　以下说明针对没有学过Java或者Java基础薄弱的人</p>
-<p>@Override<br>    在重写父类的onCreate时，在方法前面加上@Override 系统可以帮你检查方法的正确性。例如，public void onCreate(Bundle savedInstanceState){…….}这种写法是正确的，如果你写成public void oncreate(Bundle savedInstanceState){…….}这样编译器回报如下错误——The method oncreate(Bundle) of type HelloWorld must override or implement a supertype method，以确保你正确重写onCreate方法。（因为oncreate应该为onCreate）<br>而如果你不加@Override，则编译器将不会检测出错误，而是会认为你新定义了一个方法oncreate。</p>
+<p>@Override<br>在重写父类的onCreate时，在方法前面加上@Override 系统可以帮你检查方法的正确性。例如，public void onCreate(Bundle savedInstanceState){…….}这种写法是正确的，如果你写成public void oncreate(Bundle savedInstanceState){…….}这样编译器回报如下错误——The method oncreate(Bundle) of type HelloWorld must override or implement a supertype method，以确保你正确重写onCreate方法。（因为oncreate应该为onCreate）。而如果你不加@Override，则编译器将不会检测出错误，而是会认为你新定义了一个方法oncreate。</p>
 <p>android.app.Activity类：因为几乎所有的活动（activities）都是与用户交互的，所以Activity类关注创建窗口，你可以用方法setContentView(View)将自己的UI放到里面。然而活动通常以全屏的方式展示给用户，也可以以浮动窗口或嵌入在另外一个活动中。有两个方法是几乎所有的Activity子类都实现的：</p>
 <ol>
 <li>onCreate(Bundle)：初始化你的活动（Activity），比如完成一些图形的绘制。最重要的是，在这个方法里你通常将用布局资源（layout resource）调用setContentView(int)方法定义你的UI，和用findViewById(int)在你的UI中检索你需要编程地交互的小部件（widgets）。setContentView指定由哪个文件指定布局（main.xml），可以将这个界面显示出来，然后我们进行相关操作，我们的操作会被包装成为一个意图，然后这个意图对应有相关的activity进行处理。</li>
